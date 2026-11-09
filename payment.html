@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment — AB Education Consultant</title>
+<meta name="description" content="Pay for your order with JazzCash, Easypaisa, card, or a bank transfer with receipt upload.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="mark">AB</span> AB Education Consultant</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="account.html">My Account</a>
+    </nav>
+    <div class="header-cta">
+      <a href="login.html" class="btn btn-outline">Log In</a>
+      <a href="order.html" class="btn btn-primary">Order Now</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section style="padding-bottom:24px;">
+  <div class="wrap">
+    <span class="eyebrow-rate" style="border:none;padding:0;">Step 2 of 2 — Payment</span>
+    <h1 style="max-width:18ch;margin-top:8px;">Choose how you'd like to pay</h1>
+    <p class="lede">Order <strong id="payOrderId">AB-1000</strong> — total due <strong id="payOrderTotal">PKR 3,000</strong>.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap" style="max-width:680px;margin:0 auto;">
+    <form id="payForm" class="stack card" style="padding:32px;">
+      <label class="pay-option selected">
+        <input type="radio" name="payMethod" value="jazzcash" checked>
+        <div><div class="name">JazzCash</div><div class="desc">Pay instantly from your JazzCash mobile wallet.</div></div>
+      </label>
+      <label class="pay-option">
+        <input type="radio" name="payMethod" value="easypaisa">
+        <div><div class="name">Easypaisa</div><div class="desc">Pay instantly from your Easypaisa mobile wallet.</div></div>
+      </label>
+      <label class="pay-option">
+        <input type="radio" name="payMethod" value="card">
+        <div><div class="name">Debit / Credit Card</div><div class="desc">Visa, Mastercard or UnionPay via secure payment gateway.</div></div>
+      </label>
+      <label class="pay-option">
+        <input type="radio" name="payMethod" value="bank">
+        <div><div class="name">Bank Transfer</div><div class="desc">Transfer manually and upload your receipt for verification.</div></div>
+      </label>
+
+      <div class="field" style="margin-top:4px;">
+        <label>Upload receipt (bank transfer only)</label>
+        <div class="file-drop"><input type="file" style="width:auto;"><div class="hint">Only needed if you selected bank transfer.</div></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Confirm Payment</button>
+      <p class="hint" style="text-align:center;">Card and wallet payments mark your order as Paid automatically. Bank transfers are verified by our team.</p>
+    </form>
+
+    <div id="payConfirm" class="card" style="display:none;padding:32px;text-align:center;">
+      <h3 style="margin-bottom:8px;">Payment recorded</h3>
+      <p style="margin:0 auto 20px;">Your order is now being scheduled with a writer. You can follow its status any time in My Account.</p>
+      <a href="account.html" class="btn btn-primary">Go to My Account</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <div class="brand" style="margin-bottom:12px;"><span class="mark" style="border-color:var(--paper);color:var(--paper);">AB</span> AB Education Consultant</div>
+      <p style="color:#AEBBD6;font-size:.9rem;max-width:34ch;">Academic writing and education consultancy for students in Pakistan.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="order.html">Place Order</a></li></ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul><li><a href="contact.html">Contact Us</a></li><li><a href="account.html">My Account</a></li><li><a href="contact.html">WhatsApp</a></li></ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms & Conditions</a></li><li><a href="#">Refund Policy</a></li></ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 AB Education Consultant. All rights reserved.</span>
+    <span>info@abeducation.com</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/923000000000" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.1.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
